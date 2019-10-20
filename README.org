@@ -1,0 +1,32 @@
+* BetterRest
+*A SwiftUI app leveraging a CreateML model to estimate bedtime based on coffee consumed during the day & wake up time.*
+
+[[gif.gif]]
+
+Project 4 - 100DaysOfSwiftUI - Days 26-28
+
+** Day 26
+ - Creating a ML model using training data & Create ML
+** Day 27
+ - The name of the .MLmodel file is used for the class name of the model
+ - Using the ML model is as simple as calling prediction() with the same type of data for the parameters as used in the training data itself
+#+BEGIN_SRC Swift
+let model = SleepCalculator()
+let prediction = try model.prediction(wake: Double(hour + minute), estimatedSleep: sleepAmount, coffee: Double(coffeeAmount))
+#+END_SRC
+ - And the output name will be a property with the same name as used in the model, and of the same type
+ - To generate a Date by supplying only the time, DateComponents() can be used
+#+BEGIN_SRC Swift
+static var defaultWakeTime: Date {
+        var components = DateComponents()
+        components.hour = 7
+        components.minute = 0
+        return Calendar.current.date(from: components) ?? Date()
+}
+#+END_SRC
+ - And to extract a particular component from a Date variable (wakeUp below):
+#+BEGIN_SRC Swift
+let components = Calendar.current.dateComponents([.hour, .minute], from: wakeUp)
+let hour = (components.hour ?? 0) * 60 * 60
+let minute = (components.minute ?? 0) * 60
+#+END_SRC

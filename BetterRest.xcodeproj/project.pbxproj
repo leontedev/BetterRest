@@ -13,6 +13,7 @@
 		899C1830235C3CD6002A7170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899C182F235C3CD6002A7170 /* Assets.xcassets */; };
 		899C1833235C3CD6002A7170 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899C1832235C3CD6002A7170 /* Preview Assets.xcassets */; };
 		899C1836235C3CD6002A7170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899C1834235C3CD6002A7170 /* LaunchScreen.storyboard */; };
+		899C183E235C964B002A7170 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 899C183D235C964B002A7170 /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		899C1832235C3CD6002A7170 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		899C1835235C3CD6002A7170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		899C1837235C3CD6002A7170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899C183D235C964B002A7170 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				899C182F235C3CD6002A7170 /* Assets.xcassets */,
 				899C1834235C3CD6002A7170 /* LaunchScreen.storyboard */,
 				899C1837235C3CD6002A7170 /* Info.plist */,
+				899C183D235C964B002A7170 /* SleepCalculator.mlmodel */,
 				899C1831235C3CD6002A7170 /* Preview Content */,
 			);
 			path = BetterRest;
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				899C182A235C3CCE002A7170 /* AppDelegate.swift in Sources */,
+				899C183E235C964B002A7170 /* SleepCalculator.mlmodel in Sources */,
 				899C182C235C3CCE002A7170 /* SceneDelegate.swift in Sources */,
 				899C182E235C3CCE002A7170 /* ContentView.swift in Sources */,
 			);
