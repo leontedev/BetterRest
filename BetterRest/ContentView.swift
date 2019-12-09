@@ -55,6 +55,7 @@ struct ContentView: View {
                     Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
                         Text("\(sleepAmount, specifier: "%g") hours")
                     }
+                    .accessibility(value: Text("\(sleepAmount, specifier: "%g")"))
                 }
                 
                 Section(header: Text("Daily coffee intake")) {
@@ -66,13 +67,8 @@ struct ContentView: View {
 //                        }
 //                    }
                     Picker("Coffee Intake", selection: $coffeeAmount) {
-                        ForEach(1...5, id: \.self) {
-                            Text("\($0)")
-//                            if $0 == 1 {
-//                                Text("1 cup")
-//                            } else {
-//                                Text("\($0) cups")
-//                            }
+                        ForEach(1...5, id: \.self) { count in
+                            Text("\(count)")
                         }
                     }.pickerStyle(SegmentedPickerStyle())
                 }
